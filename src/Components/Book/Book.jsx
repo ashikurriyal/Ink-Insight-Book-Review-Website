@@ -1,10 +1,14 @@
 import { FaRegStar } from "react-icons/fa6";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 const Book = ({ book }) => {
-    const { image, tags, bookName, author, rating, category} = book
+    const {bookId, image, tags, bookName, author, rating, category} = book
     return (
-        <div className="flex flex-col w-[374px] border-2 rounded-2xl p-6 gap-4">
-            <img className="w-[326px] h-[330px] bg-[#F3F3F3] rounded-2xl" src={image} alt="" />
+        <Link to={`/book/${bookId}`}>
+            <div className="flex flex-col  border-2 rounded-2xl p-6 gap-4">
+            <div className="flex justify-center bg-[#F3F3F3] rounded-2xl">
+            <img className="w-[326px] h-[330px] " src={image} alt="" />  
+            </div>
 
             <div className="  flex font-worksans font-medium text-base gap-3 text-green-500">
                 {tags.map(tag => <div className="flex" key={tag.bookId}><p className="bg-[#23BE0A0D] rounded-2xl  px-4 py-1">{tag}</p></div>)}
@@ -27,6 +31,7 @@ const Book = ({ book }) => {
                 </div>
             </div>
         </div>
+        </Link>
     );
 };
 
