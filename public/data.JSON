@@ -1,0 +1,81 @@
+[
+    {
+      "bookId": 1,
+      "bookName": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "image": "https://i.ibb.co/k3pvbnb/The-Great-Gatsby-removebg-preview.png",
+      "review": "A timeless classic depicting the roaring twenties, capturing the essence of ambition, love, and the pursuit of the American Dream.",
+      "totalPages": 180,
+      "rating": 4.5,
+      "category": "Fiction",
+      "tags": ["Classic", "Romance", "Drama"],
+      "publisher": "Scribner",
+      "yearOfPublishing": 1925
+    },
+    {
+      "bookId": 2,
+      "bookName": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "image": "https://i.ibb.co/52BpWzk/The-Catcher-in-the-Rye-removebg-preview.png",
+      "review": "A compelling portrayal of teenage angst and alienation, offering profound insights into the human condition and societal expectations.",
+      "totalPages": 224,
+      "rating": 4.3,
+      "category": "Fiction",
+      "tags": ["Coming of Age", "Psychological", "Identity"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 3,
+      "bookName": "1984",
+      "author": "George Orwell",
+      "image": "https://i.ibb.co/1z0BQWT/1984-removebg-preview.png",
+      "review": "A dystopian masterpiece that warns of the dangers of totalitarianism and explores themes of surveillance, manipulation, and resistance.",
+      "totalPages": 328,
+      "rating": 4.7,
+      "category": "Science Fiction",
+      "tags": ["Dystopian", "Political", "Social Commentary"],
+      "publisher": "Secker & Warburg",
+      "yearOfPublishing": 1949
+    },
+    {
+      "bookId": 4,
+      "bookName": "Foundation",
+      "author": "Isaac Asimov",
+      "image": "https://i.ibb.co/cwxHBf5/Foundation-removebg-preview.png",
+      "review": "A groundbreaking work of science fiction that delves into the future of humanity, spanning across galaxies and millennia, exploring the rise and fall of civilizations.",
+      "totalPages": 320,
+      "rating": 4.6,
+      "category": "Science Fiction",
+      "tags": ["Epic", "Galactic Empire", "Science"],
+      "publisher": "Gnome Press",
+      "yearOfPublishing": 1951
+    },
+    {
+      "bookId": 5,
+      "bookName": "The Art of War",
+      "author": "Sun Tzu",
+      "image": "https://i.ibb.co/HhK8TnH/The-Art-of-War3-removebg-preview.png",
+      "review": "An ancient treatise on military strategy and tactics, offering timeless wisdom applicable to various spheres of life beyond warfare.",
+      "totalPages": 128,
+      "rating": 4.7,
+      "category": "Philosophy",
+      "tags": ["Strategy", "Leadership", "Wisdom"],
+      "publisher": "Unknown",
+      "yearOfPublishing": "5th century BC"
+    },
+    {
+      "bookId": 6,
+      "bookName": "In the Footsteps of the Prophet",
+      "author": "Tariq Ramadan",
+      "image": "https://i.ibb.co/MnCK4s6/In-the-Footsteps-of-the-Prophet1-removebg-preview.png",
+      "review": "An insightful exploration of the life and teachings of the Prophet Muhammad (peace be upon him), offering contemporary lessons for Muslims and non-Muslims alike.",
+      "totalPages": 256,
+      "rating": 4.6,
+      "category": "Biography",
+      "tags": ["Prophet Muhammad", "Islamic Ethics"],
+      "publisher": "Oxford University Press",
+      "yearOfPublishing": 2007
+    }
+  ]
+  
