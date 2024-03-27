@@ -35,8 +35,9 @@ const Header = () => {
             </div>
             <div className="navbar-end lg:gap-4 gap-2">
                 <a className="btn font-worksans lg:font-semibold lg:text-lg bg-green-500 text-white">Sign In</a>
-                <a className="btn font-worksans lg:font-semibold lg:text-lg bg-sky-700 text-white">Sign Up</a>
+                <a className="btn font-worksans lg:font-semibold lg:text-lg bg-sky-500 text-white">Sign Up</a>
             </div>
+            
         </div>
 
     );
