@@ -1,7 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { getStoredReadBook, getStoredWishlistBook, saveReadBook, saveWishlistBook } from "../Utility/localStorage";
+import { getStoredReadBook, getStoredWishlistBook, saveReadBook, saveRequestBook, saveWishlistBook } from "../Utility/localStorage";
 
 const BookDetails = () => {
 
@@ -44,6 +44,11 @@ const BookDetails = () => {
         else{
             toast.error('Sorry, You have already read this book. cannot add it to your wishlist.')
         }
+
+    }
+
+    const handleRequest = () => {
+        saveRequestBook(idInt)
 
     }
     return (
@@ -90,6 +95,7 @@ const BookDetails = () => {
                 <div className="flex gap-3">
                     <a onClick={handleRead} className="btn font-worksans lg:font-semibold lg:text-lg bg-green-500 text-white">Read</a>
                     <a onClick={handleWishList} className="btn font-worksans lg:font-semibold lg:text-lg bg-sky-500 text-white">Wishlist</a>
+                    <a onClick={handleRequest} className="btn font-worksans lg:font-semibold lg:text-lg bg-red-500 text-white">Request</a>
                 </div>
             </div>
             <ToastContainer />

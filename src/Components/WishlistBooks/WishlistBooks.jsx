@@ -4,7 +4,7 @@ import WishBooksList from "../WishBooksList/WishBooksList";
 
 const WishlistBooks = () => {
 
-    const [readBooks, wishlistBooks] = useOutletContext()
+    const [readBooks, requestBooks, wishlistBooks] = useOutletContext()
 
     console.log(wishlistBooks)
     return (
