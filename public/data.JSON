@@ -1,81 +1,192 @@
 [
-    {
-      "bookId": 1,
-      "bookName": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "image": "https://i.ibb.co/Dbrmnhr/The-Gatsby-book-removebg-preview.png",
-      "review": "A timeless classic depicting the roaring twenties, capturing the essence of ambition, love, and the pursuit of the American Dream.",
-      "totalPages": 180,
-      "rating": 4.5,
-      "category": "Fiction",
-      "tags": ["Classic", "Romance", "Drama"],
-      "publisher": "Scribner",
-      "yearOfPublishing": 1925
-    },
-    {
-      "bookId": 2,
-      "bookName": "The Catcher in the Rye",
-      "author": "J.D. Salinger",
-      "image": "https://i.ibb.co/tCfrH0m/CLASSICSBC24-frontcopie-1024x1024-ezgif-com-webp-to-jpg-converter-removebg-preview.png",
-      "review": "A compelling portrayal of teenage angst and alienation, offering profound insights into the human condition and societal expectations.",
-      "totalPages": 224,
-      "rating": 4.3,
-      "category": "Fiction",
-      "tags": ["Age", "Psychological", "Identity"],
-      "publisher": "Little, Brown and Company",
-      "yearOfPublishing": 1951
-    },
-    {
-      "bookId": 3,
-      "bookName": "1984",
-      "author": "George Orwell",
-      "image": "https://i.ibb.co/1z0BQWT/1984-removebg-preview.png",
-      "review": "A dystopian masterpiece that warns of the dangers of totalitarianism and explores themes of surveillance, manipulation, and resistance.",
-      "totalPages": 328,
-      "rating": 4.7,
-      "category": "Science Fiction",
-      "tags": ["Dystopian", "Political", "Commentary"],
-      "publisher": "Secker & Warburg",
-      "yearOfPublishing": 1949
-    },
-    {
-      "bookId": 4,
-      "bookName": "Foundation",
-      "author": "Isaac Asimov",
-      "image": "https://i.ibb.co/SvkG00h/Foundation-removebg-preview.png",
-      "review": "A groundbreaking work of science fiction that delves into the future of humanity, spanning across galaxies and millennia, exploring the rise and fall of civilizations.",
-      "totalPages": 320,
-      "rating": 4.6,
-      "category": "Science Fiction",
-      "tags": ["Epic", "Galactic Empire", "Science"],
-      "publisher": "Gnome Press",
-      "yearOfPublishing": 1951
-    },
-    {
-      "bookId": 5,
-      "bookName": "The Art of War",
-      "author": "Sun Tzu",
-      "image": "https://i.ibb.co/HhK8TnH/The-Art-of-War3-removebg-preview.png",
-      "review": "An ancient treatise on military strategy and tactics, offering timeless wisdom applicable to various spheres of life beyond warfare.",
-      "totalPages": 128,
-      "rating": 4.7,
-      "category": "Philosophy",
-      "tags": ["Strategy", "Leadership", "Wisdom"],
-      "publisher": "Unknown",
-      "yearOfPublishing": 1575
-    },
-    {
-      "bookId": 6,
-      "bookName": "In the Footsteps of the Prophet",
-      "author": "Tariq Ramadan",
-      "image": "https://i.ibb.co/MnCK4s6/In-the-Footsteps-of-the-Prophet1-removebg-preview.png",
-      "review": "An insightful exploration of the life and teachings of the Prophet Muhammad (peace be upon him), offering contemporary lessons for Muslims and non-Muslims alike.",
-      "totalPages": 256,
-      "rating": 4.6,
-      "category": "Biography",
-      "tags": ["Prophet Muhammad", "Islamic Ethics"],
-      "publisher": "Oxford University Press",
-      "yearOfPublishing": 2007
-    }
-  ]
+  {
+    "bookId": 1,
+    "bookName": "কালবেলা",
+    "author": "সমরেশ মজুমদার",
+    "image": "https://i.ibb.co/m6ZgfRB/Kalbela2.jpg",
+    "review": "“Kalbela” traces a young man’s tumultuous and violent journey through idealistic visions to reality, in the course of which, he also discovers love. Kalbela begins with the decision of young Animesh Mitra to join the Scottish Church College in Calcutta for higher studies. He leaves the village in North Bengal which he grew up in, and travels to the capital city.",
+    "totalPages": 432,
+    "rating": 4.9,
+    "category": "Novel",
+    "tags": [
+      "Literature",
+      "Drama"
+    ],
+    "publisher": "Ananda",
+    "yearOfPublishing": 2017
+  },
+  {
+    "bookId": 2,
+    "bookName": "চাঁদের পাহাড়",
+    "author": "বিভূতিভূষণ বন্দ্যোপাধ্যায়",
+    "image": "https://i.ibb.co/sQL00Ch/chader-pahar.jpg",
+    "review": "একটি অদ্ভুত অনুভূতির প্রকাশ যেখানে গ্রীগ হর্স্টের একটি ছেলে শঙ্কর পাহাড়ের সঙ্গে সম্পর্ক তৈরি করে।",
+    "totalPages": 320,
+    "rating": 4.6,
+    "category": "উপন্যাস",
+    "tags": [
+      "ভ্রমণ",
+      "পাহাড়"
+    ],
+    "publisher": "অনন্যা",
+    "yearOfPublishing": 1937
+  },
+  {
+    "bookId": 3,
+    "bookName": "শেষের কবিতা",
+    "author": "রবীন্দ্রনাথ ঠাকুর",
+    "image": "https://i.ibb.co/7YW26qF/shesher-kobita.png",
+    "review": "একটি প্রেমের গল্প যা রুবিন্দ্রনাথ ঠাকুরের কবিতা পর্বে প্রকাশিত হয়েছে।",
+    "totalPages": 200,
+    "rating": 4.4,
+    "category": "কবিতা",
+    "tags": [
+      "প্রেম",
+      "আত্মীয়তা"
+    ],
+    "publisher": "অনন্যা",
+    "yearOfPublishing": 1928
+  },
+  {
+    "bookId": 4,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/Dbrmnhr/The-Gatsby-book-removebg-preview.png",
+    "review": "A timeless classic depicting the roaring twenties, capturing the essence of ambition, love, and the pursuit of the American Dream.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": [
+      "Classic",
+      "Romance",
+      "Drama"
+    ],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 5,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/tCfrH0m/CLASSICSBC24-frontcopie-1024x1024-ezgif-com-webp-to-jpg-converter-removebg-preview.png",
+    "review": "A compelling portrayal of teenage angst and alienation, offering profound insights into the human condition and societal expectations.",
+    "totalPages": 224,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": [
+      "Age",
+      "Psychological",
+      "Identity"
+    ],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
   
+  {
+    "bookId": 6,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/1z0BQWT/1984-removebg-preview.png",
+    "review": "A dystopian masterpiece that warns of the dangers of totalitarianism and explores themes of surveillance, manipulation, and resistance.",
+    "totalPages": 328,
+    "rating": 4.7,
+    "category": "Science Fiction",
+    "tags": [
+      "Dystopian",
+      "Political",
+      "Commentary"
+    ],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 7,
+    "bookName": "Foundation",
+    "author": "Isaac Asimov",
+    "image": "https://i.ibb.co/SvkG00h/Foundation-removebg-preview.png",
+    "review": "A groundbreaking work of science fiction that delves into the future of humanity, spanning across galaxies and millennia, exploring the rise and fall of civilizations.",
+    "totalPages": 320,
+    "rating": 4.6,
+    "category": "Science Fiction",
+    "tags": [
+      "Epic",
+      "Galactic Empire",
+      "Science"
+    ],
+    "publisher": "Gnome Press",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 8,
+    "bookName": "The Art of War",
+    "author": "Sun Tzu",
+    "image": "https://i.ibb.co/HhK8TnH/The-Art-of-War3-removebg-preview.png",
+    "review": "An ancient treatise on military strategy and tactics, offering timeless wisdom applicable to various spheres of life beyond warfare.",
+    "totalPages": 128,
+    "rating": 4.7,
+    "category": "Philosophy",
+    "tags": [
+      "Strategy",
+      "Leadership",
+      "Wisdom"
+    ],
+    "publisher": "Unknown",
+    "yearOfPublishing": 1575
+  },
+  {
+    "bookId": 9,
+    "bookName": "In the Footsteps of the Prophet",
+    "author": "Tariq Ramadan",
+    "image": "https://i.ibb.co/MnCK4s6/In-the-Footsteps-of-the-Prophet1-removebg-preview.png",
+    "review": "An insightful exploration of the life and teachings of the Prophet Muhammad (peace be upon him), offering contemporary lessons for Muslims and non-Muslims alike.",
+    "totalPages": 256,
+    "rating": 4.6,
+    "category": "Biography",
+    "tags": [
+      "Prophet Muhammad",
+      "Islamic Ethics"
+    ],
+    "publisher": "Oxford University Press",
+    "yearOfPublishing": 2007
+  },
+  {
+    "bookId": 10,
+    "bookName": "মেঘ বৃষ্টি আলো",
+    "author": "সুনীল গঙ্গোপাধ্যায়",
+    "image": "https://i.ibb.co/Y04ydTr/megh-brishti-alo.jpg",
+    "review": "একটি উত্তেজনাপূর্ণ কবিতা যা আমাদের প্রাকৃতিক সৌন্দর্য বর্ণনা করে।",
+    "totalPages": 150,
+    "rating": 4.3,
+    "category": "কবিতা",
+    "tags": ["প্রাকৃতিক সৌন্দর্য", "কবিতা"],
+    "publisher": "অনন্যা",
+    "yearOfPublishing": 1995
+},
+{
+    "bookId": 11,
+    "bookName": "মনের মানুষ",
+    "author": "সুনীল গঙ্গোপাধ্যায়",
+    "image": "https://i.ibb.co/25FDZf9/moner-manush.jpg",
+    "review": "একটি উত্তেজনাপূর্ণ উপন্যাস যা মানুষের জীবনের গল্প নিয়ে আলোচনা করে।",
+    "totalPages": 220,
+    "rating": 4.4,
+    "category": "উপন্যাস",
+    "tags": ["মানুষের জীবন", "উত্তেজনা"],
+    "publisher": "অনন্যা",
+    "yearOfPublishing": 2000
+},
+{
+    "bookId": 12,
+    "bookName": "সৈয়দ মুজতবা আলী",
+    "author": "নুরুর রহমান খান",
+    "image": "https://i.ibb.co/8BQvntS/Syed-Mujtaba-Ali.jpg",
+    "review": "একটি চমৎকার উপন্যাস যা রহস্য এবং উপদ্রব নিয়ে আলোচনা করে।",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "উপন্যাস",
+    "tags": ["রহস্য", "উপদ্রব"],
+    "publisher": "অনন্যা",
+    "yearOfPublishing": 2015
+}
+  
+]
