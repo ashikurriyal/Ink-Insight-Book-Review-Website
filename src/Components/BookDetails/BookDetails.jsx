@@ -1,21 +1,50 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { saveReadBook } from "../Utility/localStorage";
+import { getStoredReadBook, getStoredWishlistBook, saveReadBook, saveWishlistBook } from "../Utility/localStorage";
 
 const BookDetails = () => {
+
     const books = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
-    const book = books.find(book => book.bookId === idInt);
-    console.log(book);
+    
 
-    const handleRead = () =>{
-        saveReadBook(idInt);
-        toast('Success')
+    const book = books.find(book => book.bookId === idInt);
+    
+
+    const handleRead = () => {
+
+        const bookRead = getStoredReadBook().find(book => book === idInt)
+        
+        
+        if (!bookRead) {
+            saveReadBook(idInt);
+            toast.success('Book Added to Read List')
+        }
+        else {
+            toast.error('You have already read this book ')
+        } 
+
     }
-    const handleWishList = () =>{
-        toast('Book Added to Wishlist')
+    const handleWishList = () => {
+
+
+        const bookRead = getStoredReadBook().find(book => book === idInt)
+
+        const wishListAdded = getStoredWishlistBook().find(book => book === idInt)
+
+        if (!bookRead) {
+            saveWishlistBook(idInt);
+            toast.success('Book Added to Wishlist')
+        }
+        else if(wishListAdded){
+            toast.error('Book Already Added to Wishlist')
+        }
+        else{
+            toast.error('Sorry, You have already read this book. cannot add it to your wishlist.')
+        }
+
     }
     return (
         <div className="lg:grid grid-cols-2 gap-12 mb-12 lg:mt-12">
@@ -33,7 +62,7 @@ const BookDetails = () => {
 
                     <div className="  flex font-worksans font-medium text-base gap-3 text-sky-500 items-center">
                         <span className="text-[#131313] font-worksans font-bold text-base">Tag</span>
-                        {book.tags.map(tag => <div className="flex" key={tag.bookId}><p className="bg-[#0a58be0d] rounded-2xl  px-4 py-1">{tag}</p></div>)}
+                        {book.tags.map(tag => <div className="flex" key={book.tags.bookId}><p className="bg-[#0a58be0d] rounded-2xl  px-4 py-1">{tag}</p></div>)}
                     </div>
 
                 </div>
@@ -59,8 +88,8 @@ const BookDetails = () => {
                     </table>
                 </div>
                 <div className="flex gap-3">
-                <a onClick={handleRead} className="btn font-worksans lg:font-semibold lg:text-lg bg-green-500 text-white">Read</a>
-                <a onClick={handleWishList} className="btn font-worksans lg:font-semibold lg:text-lg bg-sky-500 text-white">Wishlist</a>
+                    <a onClick={handleRead} className="btn font-worksans lg:font-semibold lg:text-lg bg-green-500 text-white">Read</a>
+                    <a onClick={handleWishList} className="btn font-worksans lg:font-semibold lg:text-lg bg-sky-500 text-white">Wishlist</a>
                 </div>
             </div>
             <ToastContainer />

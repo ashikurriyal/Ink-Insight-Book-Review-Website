@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
-import { GrLocation } from "react-icons/gr";
-import { IoPeople } from "react-icons/io5";
-import { IoMdListBox } from "react-icons/io";
+import { GrLocation } from 'react-icons/gr';
+import { IoMdListBox } from 'react-icons/io';
+import { IoPeople } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
-const ReadBooksList = ({ list }) => {
-    const { bookName, image, author, tags, yearOfPublishing, publisher, totalPages, category, rating, bookId } = list;
-    console.log(list)
+
+const WishBooksList = ({wlist}) => {
+
+    const {bookId, bookName, image, author, tags, yearOfPublishing, publisher, totalPages, category, rating } = wlist;
+    // console.log(wlist)
     return (
         <div className='lg:flex grid grid-cols-1 border-2 shadow-sm lg:p-5 p-4 gap-10 rounded-2xl my-8'>
             <div className=''>
@@ -46,9 +48,8 @@ const ReadBooksList = ({ list }) => {
         </div>
     );
 };
-
-ReadBooksList.propTypes = {
-    list: PropTypes.object
+WishBooksList.propTypes = {
+    wlist: PropTypes.object
 }
 
-export default ReadBooksList;
+export default WishBooksList;

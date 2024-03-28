@@ -1,24 +1,52 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
-import { getStoredReadBook } from "../Utility/localStorage";
+import { getStoredReadBook, getStoredWishlistBook } from "../Utility/localStorage";
 
 
 const ListedBooks = () => {
 
     const [tabIndex, setTabindex] = useState(0);
 
-    const [readBooks, setReadBooks] = useState([])
+    const [readBooks, setReadBooks] = useState([]);
+
+    const [wishlistBooks, setWishlistBooks] = useState([]);
 
     const books = useLoaderData();
+    
+
     useEffect(() => {
         const storedBookIds = getStoredReadBook();
         if(books.length > 0){
             const booksRead = books.filter(book => storedBookIds.includes(book.bookId))
 
             setReadBooks(booksRead)
-            // console.log(booksRead)
+           
         }
     }, [])
+
+    useEffect(() => {
+        const storedBookIds = getStoredWishlistBook();
+        
+        if(books.length > 0){
+            const booksWishlist = books.filter(book => storedBookIds.includes(book.bookId))
+
+            setWishlistBooks(booksWishlist)
+           
+        }
+    }, [])
+
+
+
+    // const wbooks = useLoaderData();
+    /* useEffect(() => {
+        const storedBookIds = getStoredWishlistBook();
+        if(books.length > 0){
+            const booksWishlist = books.filter(book => storedBookIds.includes(book.bookId))
+
+            setWishlistBooks(booksWishlist)
+            // console.log(booksWishlist)
+        }
+    },[]) */
 
 
     return (
@@ -46,13 +74,13 @@ const ListedBooks = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
+                        </svg> 
                         <span>Wishlist Books</span>
                     </Link>
 
                 </div>
             </div>
-            <Outlet context={[readBooks]}></Outlet>
+            <Outlet context={[readBooks, wishlistBooks]}></Outlet>
         </div>
     );
 };
