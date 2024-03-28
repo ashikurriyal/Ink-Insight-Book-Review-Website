@@ -13,6 +13,13 @@ const Header = () => {
         <li><NavLink to="/pages-to-read" style={({ isActive }) => {
             return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
         }}>Pages to Read</NavLink></li>
+        <li><NavLink to="/about-us" style={({ isActive }) => {
+            return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
+        }}>About Us</NavLink></li>
+        <li><NavLink to="/contact-us" style={({ isActive }) => {
+            return isActive ? { backgroundColor: 'white', color: 'rgb(2 132 199)', fontWeight: '600', borderColor: 'rgb(2, 132, 199)', borderWidth: '2px', borderStyle: 'solid' } : {}
+        }}>Contact Us</NavLink></li>
+
     </div>
     return (
 
@@ -23,7 +30,7 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        {links} 
+                        {links}
                     </ul>
                 </div>
                 <p className="lg:text-4xl text-xl font-worksans font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-600 to-blue-800 p-1">Ink Insight</p>
@@ -37,7 +44,7 @@ const Header = () => {
                 <a className="btn font-worksans lg:font-semibold lg:text-lg bg-green-500 text-white">Sign In</a>
                 <a className="btn font-worksans lg:font-semibold lg:text-lg bg-sky-500 text-white">Sign Up</a>
             </div>
-            
+
         </div>
 
     );

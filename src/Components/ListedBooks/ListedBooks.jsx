@@ -14,37 +14,46 @@ const ListedBooks = () => {
     const [requestBooks, setRequestBooks] = useState([])
 
     const books = useLoaderData();
-    
+
+    const sortTotalPages = () => {
+        readBooks.sort((b1, b2) => (b1.totalPages < b2.totalPages) ? 1 : (b1.totalPages > b2.totalPages) ? -1 : 0);
+        wishlistBooks.sort((b1, b2) => (b1.totalPages < b2.totalPages) ? 1 : (b1.totalPages > b2.totalPages) ? -1 : 0);
+    }
+    const sortPublishYear = () => {
+        readBooks.sort((b1, b2) => (b1.yearOfPublishing < b2.yearOfPublishing) ? 1 : (b1.yearOfPublishing > b2.yearOfPublishing) ? -1 : 0);
+        wishlistBooks.sort((b1, b2) => (b1.yearOfPublishing < b2.yearOfPublishing) ? 1 : (b1.yearOfPublishing > b2.yearOfPublishing) ? -1 : 0);
+    }
+
 
     useEffect(() => {
         const storedBookIds = getStoredReadBook();
-        if(books.length > 0){
+        if (books.length > 0) {
             const booksRead = books.filter(book => storedBookIds.includes(book.bookId))
 
             setReadBooks(booksRead)
-           
+
         }
     }, [])
 
     useEffect(() => {
         const storedBookIds = getStoredWishlistBook();
-        
-        if(books.length > 0){
+
+        if (books.length > 0) {
             const booksWishlist = books.filter(book => storedBookIds.includes(book.bookId))
 
             setRequestBooks(booksWishlist)
-           
+
         }
     }, [])
 
     useEffect(() => {
         const storedBookIds = getStoredRequestBook();
-        
-        if(books.length > 0){
+
+        if (books.length > 0) {
             const booksRequest = books.filter(book => storedBookIds.includes(book.bookId))
 
             setWishlistBooks(booksRequest)
-           
+
         }
     }, [])
 
@@ -69,15 +78,20 @@ const ListedBooks = () => {
                     <h2 className='font-worksans font-bold text-4xl text-center'>Listed Books</h2>
                 </div>
 
-                <div>
-                    <button className="btn btn-primary bg-sky-500">Sort By</button>
-                </div>
+                <details className="dropdown">
+                    <summary className="m-1 btn">Sort By</summary>
+                    <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                        
+                        <li ><Link onClick={sortTotalPages}>Total Page</Link></li>
+                        <li ><Link onClick={sortPublishYear}>Publish Year</Link></li>
+                    </ul>
+                </details>
             </div>
             <div className="flex">
                 <div className="flex items-center  overflow-x-auto overflow-y-hidden sm:justify-center flex-nowrap dark:bg-gray-100 dark:text-gray-800">
                     <Link to=''
-                    onClick={() => setTabindex(0)}
-                    className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 0 ? 'border-2 border-sky-500 border-b-0' : 'border-b-2 border-sky-500'} rounded-t-lg dark:border-gray-600 dark:text-gray-900`}>
+                        onClick={() => setTabindex(0)}
+                        className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 0 ? 'border-2 border-sky-500 border-b-0' : 'border-b-2 border-sky-500'} rounded-t-lg dark:border-gray-600 dark:text-gray-900`}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                         </svg>
@@ -87,14 +101,14 @@ const ListedBooks = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg> 
+                        </svg>
                         <span>Wishlist Books</span>
                     </Link>
                     <Link to={`request-books`} onClick={() => setTabindex(2)} className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 2 ? 'border-2 border-b-0 border-sky-500' : 'border-b-2 border-sky-500'} rounded-t-lg dark:border-gray-600 dark:text-gray-900`}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
                             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg> 
+                        </svg>
                         <span>Request Books</span>
                     </Link>
 
